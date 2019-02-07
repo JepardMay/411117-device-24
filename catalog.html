@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="css/normalize.css" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet">  
   </head>
   <body>
-    <header class="main-heder">
+    <header class="main-header">
       <a class="main-header-logo" href="index.html">
         <img src="img/index-logo.svg" width="164" height="35" alt="Логотип Device">
       </a>
@@ -15,7 +17,7 @@
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                     <label class="visually-hidden" for="search"></label>
                     <input class="search-input" type="search" name="search" placeholder="Поиск по сайту" id="search">
-                    <button class="button" type="submit">Найти</button> 
+                    <button class="search-button" type="submit">Найти</button> 
                 </form>
             </li>
             <li class="login-link">
@@ -31,7 +33,7 @@
         </ul>
         <ul class="site-navigation">
             <li><a href="#">Каталог товаров</a>
-                <ul class="catalog-items">
+                <ul class="site-navigation-items">
                     <li><a href="#">Виртуальная реальность</a></li>
                     <li class="catalog-current">Моноподы для селфи</li>
                     <li><a href="#">Экшн-камеры</a></li>
@@ -48,17 +50,17 @@
     </header>
     <main class="container">
         <h1>Моноподы для селфи</h1>
-        <ul class="breadcrubs">
+        <ul class="breadcrumbs">
             <li><a href="index.html">Главная</a></li>
             <li><a href="#">Каталог товаров</a></li>
-            <li class="breadcrubs-current">Моноподы для селфи</li>
+            <li class="breadcrumbs-current">Моноподы для селфи</li>
         </ul>
         <section class="filters">
             <h2>Фильтр:</h2>
             <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
                 <fieldset>
                     <legend>Стоимость</legend>
-                    <!-- There will be smh -->>
+                    <!-- There will be smh -->
                 </fieldset>
                 <fieldset>
                     <legend>Цвет</legend>
@@ -146,12 +148,12 @@
                 </li>
             </ul>
         </section>
-        <ul class="paginator-list">
-            <li class="paginator-item"><a>Назад</a></li>
-            <li class="paginator-item paginator-item-current"><a>1</a></li>
-            <li class="paginator-item"><a href="#">2</a></li>
-            <li class="paginator-item"><a href="#">3</a></li>
-            <li class="paginator-item"><a href="#">Вперед</a></li>
+        <ul class="pagination-list">
+            <li class="pagination-item"><a>Назад</a></li>
+            <li class="pagination-item pagination-item-current"><a>1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="#">Вперед</a></li>
         </ul>
     </main>
     <footer class="main-footer">
@@ -185,7 +187,7 @@
             <a class="social-button" href="#">Twitter</a>
           </div>
           <div class="footer-copyright">
-            <a class="button" href="https://htmlacademy.ru"><img src="img/htmlacademy-logo.svg" width="27" height="35" alt="Логотип HTML Academy">HTML Academy</a>
+            <a href="https://htmlacademy.ru"><img src="img/htmlacademy-logo.svg" width="27" height="35" alt="Логотип HTML Academy">HTML Academy</a>
           </div>
     </footer>
   </body>
