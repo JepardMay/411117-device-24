@@ -40,7 +40,7 @@ body {
     margin: 0;
     padding: 0;
 
-    font-family: 'Gilroy ExtraBold', Arial, sans-serif;
+    font-family: "Gilroy ExtraBold", Arial, sans-serif;
 
     font-size: 18px;
     line-height: 24px;
@@ -48,6 +48,14 @@ body {
     color: #000000;
     
     background-color: #ffffff;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
 
 a {
@@ -81,7 +89,7 @@ a {
 }
 
 .user-navigation {
-    font-family: 'Open Sans Light', Arial, sans-serif;
+    font-family: "Open Sans Light", Arial, sans-serif;
     
     font-size: 15px;
     line-height: 30px;
@@ -134,7 +142,7 @@ a {
 }
 
 .site-navigation-items {
-    font-family: 'Open Sans Light', Arial, sans-serif;
+    font-family: "Open Sans Light", Arial, sans-serif;
     
     font-size: 15px;
     line-height: 36px;
@@ -163,7 +171,7 @@ a {
 }
 
 .index-column p {
-    font-family: 'Open Sans Light', Arial, sans-serif;
+    font-family: "Open Sans Light", Arial, sans-serif;
     
     font-size: 15px;
     line-height: 30px;
@@ -182,7 +190,7 @@ h1 {
 }
 
 .breadcrumbs {
-    font-family: 'Open Sans Light', Arial, sans-serif;
+    font-family: "Open Sans Light", Arial, sans-serif;
     
     font-size: 14px;
     font-weight: 300;
@@ -222,7 +230,7 @@ h1 {
 .filters ul {
     list-style: none;
 
-    font-family: 'Open Sans Light', Arial, sans-serif;
+    font-family: "Open Sans Light", Arial, sans-serif;
     font-size: 14px;
     line-height: 40px;
     font-weight: 300;
@@ -241,7 +249,7 @@ h1 {
 }
 
 .catalog-item-price {
-    font-family: 'Gilroy Light', Arial, sans-serif;
+    font-family: "Gilroy Light", Arial, sans-serif;
     
     font-size: 16px;
     font-weight: 300; 
@@ -262,7 +270,7 @@ h1 {
 }
 
 .footer-user-navigation {
-    font-family: 'Open Sans Light', Arial, sans-serif;
+    font-family: "Open Sans Light", Arial, sans-serif;
     
     font-size: 15px;
     line-height: 30px;
@@ -299,7 +307,7 @@ h1 {
 
 .footer-address,
 .footer-phone a {
-    font-family: 'Open Sans Light', Arial, sans-serif;
+    font-family: "Open Sans Light", Arial, sans-serif;
     
     font-size: 15px;
     line-height: 30px;
@@ -337,7 +345,7 @@ h1 {
 
 .letter-form input[type="text"],
 .letter-form textarea {
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
 
     font-size: 14px;
     line-height: 18px;
