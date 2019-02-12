@@ -36,6 +36,14 @@
          url('../fonts/opensans.woff2') format('woff2');
 }
 
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -62,6 +70,16 @@ a {
     text-decoration: none;
 }
 
+.main-header-logo:hover path, 
+.footer-logo:hover path {
+    fill-opacity: 0.6;
+}
+
+.main-header-logo:focus path, 
+.footer-logo:focus path {
+    fill-opacity: 0.3;
+}
+
 .button {
     font: inherit;
 
@@ -69,12 +87,16 @@ a {
     text-transform: uppercase;
     letter-spacing: 3.6px;
 
-    background-color: #f0c52e;
+    background-color: transparent;
+    background-image: linear-gradient(transparent 40%, #f0c52e 40%, #f0c52e 60%, transparent 40%);
     border: none;
 }
 
 .button:hover {
-    /**/
+    color: #000000;
+    background-color: #f0c52e;
+
+    transition-duration: 0.5s;
 }
 
 .button:focus {
@@ -85,6 +107,7 @@ a {
 .service-button:focus {
     color: #f0c52e;
     background-color: #000000;
+    background-image: none;
 }
 
 .main-header {
@@ -413,6 +436,10 @@ h1 {
     background-color: #464646;
 }
 
+.footer-logo path {
+    fill: #ffc600;
+}
+
 .main-footer .login-out {
     color: rgba(255, 255, 255, 0.3);
 }
@@ -516,5 +543,106 @@ h1 {
 
     background-color: #ffffff;
     border: solid 3px #f0c52e;
+}
+
+/* ----- Flex styles ----- */
+
+.main-header {
+    margin: 0 auto;
+    width: 1160px;
+    padding: 23px 60px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: transparent;
+    background-image: linear-gradient(transparent 40px, #f0c52e 40px);
+}
+
+.site-navigation,
+.user-navigation {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.logotypes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.index-column{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    width: 465px;
+}
+
+.contact {
+    width: 560px;
+}
+
+.items-columns {
+    display: flex;
+    padding: 0;
+}
+
+.filters {
+    width: 327px;
+    padding: 10px 60px;
+    background-image: linear-gradient(#d9d9d9 71px, #ebebeb 71px);
+}
+
+.items-column {
+    flex-grow: 1;
+}
+
+.sorting {
+    display: flex;
+    padding: 10px 70px;
+}
+
+.sorting-preference {
+    display: flex;
+}
+
+.sorting-order {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pagination-list {
+    display: flex;
+    min-height: 70px;
+    margin-left: 73px; 
+}
+
+.slider-list_fitness-bracelet,
+.slider-list_quadcopter,
+.services-slider-list-guarantee,
+.services-slider-list-credit {
+    display: none;
+}
+
+.main-footer {
+    width: 100%;
+    padding: 65px 0;
+    display: flex;
+}
+
+.footer-user-navigation,
+.footer-column {
+    display: flex;
+}
+
+.footer-site-navigation {
+    display: flex;
 }
 
