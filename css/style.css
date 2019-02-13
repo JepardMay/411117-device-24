@@ -101,6 +101,7 @@ a {
 
 .button:focus {
     color: rgba(0, 0, 0, 0.3);
+    outline: none;
 }
 
 .service-button-current,
@@ -108,6 +109,7 @@ a {
     color: #f0c52e;
     background-color: #000000;
     background-image: none;
+    outline: none;
 }
 
 .main-header {
@@ -309,11 +311,31 @@ h1 {
     list-style: none;
 }
 
-.catalog-item h3 {
+.compare-button {
+    font-family: "Open Sans Light", Arial, sans-serif;
+    
+    font-size: 13px;
+    line-height: 36px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    border: none;
+}
+
+.compare-button:hover {
     color: #000000;
 }
 
-.catalog-item-price {
+.compare-button:focus {
+    color: rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.product-name a {
+    color: #000000;
+}
+
+.product-price {
     font-family: "Gilroy Light", Arial, sans-serif;
     
     font-size: 16px;
@@ -415,7 +437,7 @@ h1 {
 }
 
 .services-slider-list {
-    background-color: #e5e5e5;
+    
 }
 
 .services-slider-list h3 {
@@ -604,6 +626,7 @@ h1 {
 .sorting {
     display: flex;
     padding: 10px 70px;
+    margin-bottom: 70px;
 }
 
 .sorting-preference {
@@ -623,6 +646,29 @@ h1 {
     flex-wrap: wrap;
 }
 
+.catalog-item {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+.catalog-item:nth-child(2n) {
+    margin-left: auto;
+}
+
+.product-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-image-wrapper {
+    order: -1;
+}
+
+.popup-buttons {
+    display: none;
+}
+
 .pagination-list {
     display: flex;
     min-height: 70px;
@@ -632,7 +678,7 @@ h1 {
 .slider {
     margin: 0;
     padding: 0;
-    
+
     background-color: transparent;
     background-image: linear-gradient(rgba(240, 197, 46, 0.5) 113px, transparent 113px);
 }
@@ -642,6 +688,10 @@ h1 {
 .services-slider-list-guarantee,
 .services-slider-list-credit {
     display: none;
+}
+
+.popular {
+    margin-bottom: 84px;
 }
 
 .popular ul {
@@ -673,6 +723,23 @@ h1 {
 
 .popular-item:hover {
     background-color: #f0c52e;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 388px;
+    margin-bottom: 94px;
+
+    background-color: transparent;
+    background-image: linear-gradient(transparent 100px, #e5e5e5 100px);
+}
+
+.services-navigation,
+.services-slider {
+    margin: 0;
+    padding: 0;
 }
 
 .main-footer {
