@@ -111,7 +111,7 @@ a {
 }
 
 .main-header {
-    background-color: #f0c52e;
+    
 }
 
 .main-header .login-out {
@@ -512,12 +512,12 @@ h1 {
     color: #ffc600;
 }
 
-.footer-copyright a:hover {
-    color: rgba(255, 198, 0, 0.6)
+.footer-copyright a:hover img {
+    opacity: 0.6;
 }
 
-.footer-copyright a:focus {
-    color: rgba(255, 198, 0, 0.3)
+.footer-copyright a:focus img {
+    opacity: 0.3;
 }
 
 .modal {
@@ -546,16 +546,18 @@ h1 {
 }
 
 /* ----- Flex styles ----- */
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
 
 .main-header {
-    margin: 0 auto;
-    width: 1160px;
     padding: 23px 60px;
     display: flex;
     flex-direction: column;
 
     background-color: transparent;
-    background-image: linear-gradient(transparent 40px, #f0c52e 40px);
+    background-image: linear-gradient(transparent 40px, rgba(240, 197, 46, 0.5) 40px);
 }
 
 .site-navigation,
@@ -564,11 +566,6 @@ h1 {
     padding: 0;
     display: flex;
     justify-content: space-between;
-}
-
-.container {
-    width: 1160px;
-    margin: 0 auto;
 }
 
 .logotypes {
@@ -618,10 +615,26 @@ h1 {
     justify-content: flex-end;
 }
 
+.catalog-list {
+    padding: 0;
+    margin: 0;
+    margin-left: 73px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .pagination-list {
     display: flex;
     min-height: 70px;
     margin-left: 73px; 
+}
+
+.slider {
+    margin: 0;
+    padding: 0;
+    
+    background-color: transparent;
+    background-image: linear-gradient(rgba(240, 197, 46, 0.5) 113px, transparent 113px);
 }
 
 .slider-list_fitness-bracelet,
@@ -631,10 +644,45 @@ h1 {
     display: none;
 }
 
+.popular ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular li {
+    margin-right: 40px;
+}
+
+.popular li:last-child {
+    margin-right: 0;
+}
+
+.popular a {
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-item {
+    width: 160px;
+    height: 160px;
+    background-color: rgba(240, 197, 46, 0.5); 
+    margin-bottom: 35px;
+}
+
+.popular-item:hover {
+    background-color: #f0c52e;
+}
+
 .main-footer {
     width: 100%;
     padding: 65px 0;
     display: flex;
+}
+
+.main-footer .container {
+    padding: 0 10px;
 }
 
 .footer-user-navigation,
@@ -642,7 +690,50 @@ h1 {
     display: flex;
 }
 
+.footer-column:first-child {
+    justify-content: space-between;
+}
+
+.footer-user-navigation {
+    align-self: flex-start;
+}
+
+.footer-user-navigation li {
+    margin-right: 32px; 
+}
+
+.footer-user-navigation li:last-child {
+    margin-right: 0; 
+}
+
 .footer-site-navigation {
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-site-navigation li {
+    margin-right: 38px;
+}
+
+.footer-site-navigation li:last-child {
+    margin-right: 0;
+}
+
+.footer-social {
+    margin-left: 509px;
+}
+
+.footer-social a {
+    margin-right: 23px;
+}
+
+.footer-social a:last-child {
+    margin-right: 0;
+}
+
+.footer-phone,
+.footer-copyright {
+    margin-left: auto;
 }
 
