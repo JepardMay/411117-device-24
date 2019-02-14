@@ -399,21 +399,21 @@ h1 {
     color: #464646;
 }
 
-.features td:first-child {
+.features tr:first-child {
+    font-family: "Gilroy Light", Arial, sans-serif;
+    
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 300; 
+}
+
+.features tr:last-child {
     font-family: "Open Sans Light", Arial, sans-serif;
     
     font-size: 13px;
     line-height: 20px;
     font-weight: 300;
     color: #464646;
-}
-
-.features td:last-child {
-    font-family: "Gilroy Light", Arial, sans-serif;
-    
-    font-size: 36px;
-    line-height: 48px;
-    font-weight: 300; 
 }
 
 .popular ul {
@@ -593,11 +593,13 @@ h1 {
 .logotypes {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 92px;
 }
 
 .index-column{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 82px;
 }
 
 .info {
@@ -670,17 +672,60 @@ h1 {
 }
 
 .pagination-list {
+    margin-right: 0;
+    margin-top: 40px;
+    margin-bottom: 77px;
+    margin-left: 73px; 
+    padding: 0;
+    justify-content: center;
+    align-items: center;
     display: flex;
     min-height: 70px;
-    margin-left: 73px; 
+}
+
+.pagination-button:first-child {
+    margin-right: auto;
+}
+
+.pagination-button:last-child {
+    margin-left: auto;
 }
 
 .slider {
     margin: 0;
     padding: 0;
+    margin-bottom: 106px;
+}
 
+.slider-list {
     background-color: transparent;
     background-image: linear-gradient(rgba(240, 197, 46, 0.5) 113px, transparent 113px);
+}
+
+.slider-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.slider-list p {
+    margin-bottom: 48px;
+}
+
+.slider-list table {
+    margin-top: 58px;
+}
+
+.slider-list td {
+    width: 160px;
+}
+
+.slider-info-wrapper {
+    width: 480px;
+}
+
+.slider-image-wrapper {
+    align-self: center;
+    order: -1;
 }
 
 .slider-list_fitness-bracelet,
@@ -721,13 +766,12 @@ h1 {
     margin-bottom: 35px;
 }
 
-.popular-item:hover {
+.popular-item-link:hover .popular-item {
     background-color: #f0c52e;
 }
 
 .services {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     min-height: 388px;
     margin-bottom: 94px;
@@ -741,6 +785,23 @@ h1 {
     margin: 0;
     padding: 0;
 }
+
+
+.services-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 278px;
+    border-right: 7px solid #000000;
+    align-self: stretch;
+    margin-right: 116px;
+}
+
+.services-slider {
+    width: 426px;
+}
+
 
 .main-footer {
     width: 100%;
