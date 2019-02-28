@@ -76,6 +76,10 @@ input[type="radio"].visually-hidden {
     overflow: hidden;
 }
 
+main {
+    overflow: hidden;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -180,7 +184,11 @@ a {
 
 .search-form input[type="search"] {
     margin: 0;
-    height: 50px;
+    padding-left: 34px;
+    height: 49px;
+    flex-grow: 1;
+
+    display: block;
 
     font: inherit;
 
@@ -206,10 +214,6 @@ a {
     width: 85px;
     height: 49px;
 
-    position: absolute;
-    top: 1px;
-    right: 0;
-
     display: none;
 
     font: inherit;
@@ -230,13 +234,11 @@ a {
 }
 
 .search-form {
+    display: flex;
+    justify-content: space-between;
+    width: 440px;
+    min-height: 49px;
     position: relative;
-}
-
-.search-input {
-    padding-left: 34px;
-    padding-right: 87px; 
-    width: 441px;
 }
 
 .search-form::before {
@@ -416,12 +418,12 @@ a {
 .slider {
     margin: 0;
     padding: 0;
-    margin-bottom: 110px;
+    margin-bottom: 105px;
 
     position: relative;
     
     background-color: transparent;
-    background-image: linear-gradient(rgba(240, 197, 46, 0.5) 125px, transparent 125px);
+    background-image: linear-gradient(rgba(240, 197, 46, 0.5) 115px, transparent 115px);
 }
 
 .slider-list {
@@ -433,21 +435,19 @@ a {
 
 .slider-item {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .slider-info-wrapper {
     width: 480px;
-
-    position: relative;
 }
 
 .slider-info-wrapper::after {
     content: "01";
 
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -12px;
+    right: 64px;
     z-index: 1;
 
     width: 166px;
@@ -468,19 +468,32 @@ a {
 }
 
 .slider-image-wrapper {
-    align-self: center;
-
     order: -1;
+
+    align-self: center;
 }
 
 .slider-item h2 {
-    margin-top: 92px;
+    margin-top: 84px;
     margin-bottom: 20px;
 
     position: relative;
+    z-index: 2;
 
     font-size: 47px;
     line-height: 56px;
+}
+
+.slider-item_selfie-stick .slider-info-wrapper {
+    margin-left: 125px;
+}
+
+.slider-item_fitness-bracelet .slider-info-wrapper {
+    margin-left: 138px;
+}
+
+.slider-item_quadcopter .slider-info-wrapper {
+    margin-left: 42px;
 }
 
 .slider-item_selfie-stick h2 {
@@ -535,8 +548,8 @@ a {
 
 .slider-controls {
     position: absolute;
-    top: 352px;
-    right: 0;
+    top: 332px;
+    right: 62px;
     z-index: 20;
 
     font-size: 0;
@@ -590,7 +603,7 @@ a {
 }
 
 .popular {
-    margin-bottom: 84px;
+    margin-bottom: 80px;
 }
 
 .popular ul {
@@ -613,10 +626,15 @@ a {
 }
 
 .popular a {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
 
     color: #000000;
+}
+
+.popular-item-name-2 {
+    display: inline-block;
+    max-width: 122px;
 }
 
 .popular-item::before {
@@ -629,7 +647,7 @@ a {
     width: 160px;
     height: 160px;
     background-color: rgba(240, 197, 46, 0.5); 
-    margin-bottom: 35px;
+    margin-bottom: 33px;
 }
 
 .popular-item::after {
@@ -739,7 +757,7 @@ a {
     position: relative;
 }
 
-.service-button-current::after {
+.service-button::after {
     content: "";
 
     position: absolute;
@@ -751,6 +769,13 @@ a {
     height: 100%;
 }
 
+.service-button:not(.service-button-current)::after {
+    width: 0;
+    height: 0;
+
+    background-color: #f0c52e;
+}
+
 .service-button-current:hover::after {
     color: #000000;
     background-color: #f0c52e;
@@ -758,8 +783,15 @@ a {
     transition-duration: 0.5s;
 }
 
+.service-button:focus::after,
 .service-button-current:focus::after {
+    width: 120px;
+    height: 100%;
+
     background-color: #000000;
+
+    transition-property: background-color;
+    transition-duration: 0.5s;
 }
 
 .services-navigation li:first-child {
@@ -880,7 +912,7 @@ a {
     content: "";
 
     position: absolute;
-    top: -59px;
+    top: -52px;
     left: 0;
 
     width: 80px;
@@ -1006,7 +1038,6 @@ a {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
-}
 
 .breadcrumbs li:last-child {
     margin-right: 0;
@@ -1087,15 +1118,14 @@ a {
 
 .filters h2 {
     margin: 0;
-    margin-bottom: 75px;
+    margin-bottom: 80px;
     padding: 23px 0;
     height: 73px;
 }
 
 .filters legend {
     margin: 0;
-    margin-top: 16px;
-    margin-bottom: 29px;
+    margin-bottom: 15px;
     padding: 0;
 }
 
@@ -1106,7 +1136,7 @@ a {
     height: 2px;
     
     position: absolute;
-    top: -10px;
+    top: -14px;
     left: 0;
 
     background-color: #000000;
@@ -1124,7 +1154,89 @@ a {
     font-weight: 300;
 }
 
+.filter-range {
+    margin-top: 20px;
+
+    font-family: "Gilroy Light", Arial, sans-serif;
+    
+    font-size: 14px;
+    font-weight: 300; 
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.range-controls {
+    position: relative;
+
+    margin-bottom: 8px;
+}
+
+.range-controls .scale {
+    height: 2px;
+
+    background-color: #dbdbdb;
+}
+
+.range-controls .bar {
+    width: 110px;
+    height: 2px;
+
+    background-color: #91c92f;
+}
+
+.range-toggle {
+    box-sizing: initial;
+
+    position: absolute;
+    top: -9px;
+
+    width: 4px;
+    height: 4px;
+
+    background-color: #d9d9d9;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+    border: 9px solid #ffffff;
+}
+
+.range-toggle-min {
+    left: -4px;
+}
+
+.range-toggle-max {
+    left: 110px;
+}
+
+.price-controls {
+    font-size: 0;
+}
+
+.price-controls label {
+    display: inline-block;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.price-controls input {
+    width: 75px;
+    margin: 0;
+
+    color: inherit;
+    font: inherit;
+
+    background: none;
+    border: none;
+}
+
 .filter-option {
+    margin: 0;
+    padding: 0;
     padding-left: 40px;
 }
 
@@ -1207,7 +1319,7 @@ a {
     align-items: center;
     padding: 23px 0;
     padding-left: 73px;
-    margin-bottom: 70px;
+    margin-bottom: 26px;
 
     position: relative;
 }
@@ -1333,9 +1445,9 @@ a {
 }
 
 .catalog-item {
-    margin-right: 73px;
+    margin-top: 44px;
     margin-right: 39px;
-    margin-bottom: 25px;
+    margin-bottom: 0;
 
     display: flex;
     flex-direction: column;
@@ -1354,13 +1466,20 @@ a {
     align-items: baseline;
 }
 
-.product-name {
+.product-info-wrapper h3 {
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
     max-width: 252px;
 }
 
-.product-name a {
+.product-name {
     font-size: 18px;
     color: #000000;
+}
+
+.product-info-wrapper .product-name_pro-selfiestick {
+    max-width: 220px;
 }
 
 .product-price {
@@ -1435,18 +1554,44 @@ a {
     display: block;
 }
 
+.new-item {
+    position: relative;
+}
+
+.new-item::after {
+    content: "new";
+
+    width: 60px;
+    height: 61px;
+    
+    position: absolute;
+    top: 28px;
+    right: 27px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    text-transform: uppercase;
+
+    color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
 .pagination-list {
-    margin: 0;
+    margin-right: 0;
+    margin-top: 35px;
     margin-bottom: 77px;
-    margin-left: 73px; 
+    margin-left: 72px; 
     padding: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
     min-height: 70px;
 
     list-style: none;
-    font-size: 16p;
+    font-size: 16px;
     line-height: 24px;
     letter-spacing: 3.2px;
     text-transform: uppercase;
@@ -1454,11 +1599,11 @@ a {
 }
 
 .pagination-button a {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     
-    width: 136px;
+    width: 125px;
     height: 70px;
 
     margin: 0;
@@ -1477,7 +1622,7 @@ a {
 }
 
 .pagination-button:first-child {
-    margin-right: auto;
+    margin-right: 212px;
 }
 
 .pagination-button:last-child {
