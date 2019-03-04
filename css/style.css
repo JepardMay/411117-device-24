@@ -347,7 +347,7 @@ a {
     margin-right: 10px;
 }
  
-.login-link a:first-child {
+.login-link .user-cabinet:first-child {
     margin-right: 20px;
 }
 
@@ -739,6 +739,8 @@ a {
 .popular-item-name-2 {
     display: inline-block;
     max-width: 122px;
+
+    vertical-align: top;
 }
 
 .popular-item::before {
@@ -1394,6 +1396,7 @@ a {
 .price-controls label {
     display: inline-block;
 
+    vertical-align: center;
     font-size: 14px;
 
     cursor: pointer;
@@ -1973,7 +1976,7 @@ a {
             align-items: flex-start;
     margin: 0;
     padding: 0;
-    width: 500px;
+    min-width: 500px;
     
     font-family: "Open Sans Light", Arial, sans-serif;
     
@@ -1983,7 +1986,7 @@ a {
 }
 
 .footer-user-navigation .login-link {
-    margin-right: 30px;
+    margin-right: 25px;
 }
 
 .footer-user-navigation .compare {
@@ -2074,33 +2077,33 @@ a {
     margin-right: auto;
 }
 
-.footer-social a {
+.social-button {
     margin-right: 20px;
 
     color: rgba(255, 255, 255, 0.3);
 }
 
-.footer-social a path {
+.social-button path {
     fill-opacity: 0.3;
 }
 
-.footer-social a:hover path {
+.social-button:hover path {
     fill-opacity: 0.6;
 }
 
-.footer-social a:focus path {
+.social-button:focus path {
     fill-opacity: 0.1;
 }
 
-.footer-social a:last-child {
+.social-button:last-child {
     margin-right: 0;
 }
 
-.footer-social a:hover {
+.social-button:hover {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-social a:focus {
+.social-button:focus {
     color: rgba(255, 255, 255, 0.1);
 }
 
@@ -2108,11 +2111,11 @@ a {
     fill: #ffc600;
 }
 
-.footer-copyright a:hover path {
+.copyright-button:hover path {
     fill-opacity: 0.6;
 }
 
-.footer-copyright a:focus path {
+.copyright-button:focus path {
     fill-opacity: 0.3;
 }
 
