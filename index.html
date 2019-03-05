@@ -70,16 +70,16 @@
         <h1 class="visually-hidden">Device</h1>
         <section class="slider">
           <h2 class="visually-hidden">Лучшие предложения</h2>
-          <input class="visually-hidden" type="radio" id="item-1" name="toggle" checked>
-          <input class="visually-hidden" type="radio" id="item-2" name="toggle">
-          <input class="visually-hidden" type="radio" id="item-3" name="toggle">
+          <input class="visually-hidden" type="radio" id="item_selfie-stick" name="slider-toggle" checked="">
+          <input class="visually-hidden" type="radio" id="item_fitness-bracelet" name="slider-toggle">
+          <input class="visually-hidden" type="radio" id="item_quadcopter" name="slider-toggle">
           <div class="slider-controls">
-            <label for="item-1">Первый</label>
-            <label for="item-2">Второй</label>
-            <label for="item-3">Третий</label>
+            <label for="item_selfie-stick">Первый</label>
+            <label for="item_fitness-bracelet">Второй</label>
+            <label for="item_quadcopter">Третий</label>
           </div>
           <ul class="slider-list">
-            <li class="slider-item slider-item_selfie-stick" id="slide1">
+            <li class="slider-item slider-item_selfie-stick" id="slide_selfie-stick">
               <div class="slider-info-wrapper">
                 <h3>Делай селфи, как Бен Стиллер!</h3>
                 <p>
@@ -103,7 +103,7 @@
                 <img src="img/slider-1.png" width="384" height="486" alt="Фото селфи-палки">
               </div>
             </li>
-            <li class="slider-item slider-item_fitness-bracelet" id="slide2">
+            <li class="slider-item slider-item_fitness-bracelet" id="slide_fitness-bracelet">
               <div class="slider-info-wrapper">
                 <h3>Худеем правильно!</h3>
                 <p>
@@ -123,7 +123,7 @@
                 <img src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
               </div>
             </li>
-            <li class="slider-item slider-item_quadcopter" id="slide3">
+            <li class="slider-item slider-item_quadcopter" id="slide_quadcopter">
               <div class="slider-info-wrapper">
                 <h3>Порхает как бабочка, жалит как пчела!</h3>
                 <p>
@@ -184,10 +184,13 @@
         </section>
         <div class="services">
           <h2 class="visually-hidden">Услуги</h2>
+          <input class="visually-hidden" type="radio" id="item-list-delivery" name="services-toggle" checked>
+          <input class="visually-hidden" type="radio" id="item-list-warranty" name="services-toggle">
+          <input class="visually-hidden" type="radio" id="item-list-credit" name="services-toggle">
           <ul class="services-navigation">
-            <li><button class="button service-button service-button-current" type="button">Доставка</button></li>
-            <li><button class="button service-button" type="button">Гарантия</button></li>
-            <li><button class="button service-button" type="button">Кредит</button></li>
+            <li><label for="item-list-delivery" class="button service-button">Доставка</label></li>
+            <li><label for="item-list-warranty" class="button service-button">Гарантия</label></li>
+            <li><label for="item-list-credit" class="button service-button">Кредит</label></li>
           </ul>
           <ul class="services-slider">
             <li class="services-slider-list services-slider-list-delivery">
@@ -199,7 +202,7 @@
             <li class="services-slider-list services-slider-list-warranty">
               <h3>Гарантия</h3>
               <p>
-                Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
+                Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.
               </p>
             </li>
             <li class="services-slider-list services-slider-list-credit">
@@ -343,6 +346,14 @@
           </p>
           <button class="button" type="submit">Отправить</button>
         </form>
+        <button class="modal-close" type="button">Закрыть</button>
+      </section>
+
+      <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p>
+          <img src="img/map-big.jpg" width="960" height="559" alt="Наш офис находится по адресу г. Москва, ул. Строителей, 15">
+        </p>
         <button class="modal-close" type="button">Закрыть</button>
       </section>
   </body>
