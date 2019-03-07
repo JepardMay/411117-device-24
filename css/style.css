@@ -459,6 +459,7 @@ a {
     font-weight: 300;
     letter-spacing: initial;
     text-transform: none;
+    letter-spacing: 0.2px;
 
     background-color: #f7e296;
 }
@@ -731,7 +732,8 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
 
-    max-width: 160px;
+    margin-top: 194px;
+    width: 160px;
 
     color: #000000;
 }
@@ -746,14 +748,13 @@ a {
 .popular-item::before {
     content: "";
 
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
 
     width: 160px;
     height: 160px;
     background-color: rgba(240, 197, 46, 0.5); 
-    margin-bottom: 33px;
 }
 
 .popular-item::after {
@@ -1132,7 +1133,7 @@ a {
 }
 
 .index-column .button {
-    min-width: 260px;
+    width: 260px;
 }
 
 .info,
@@ -1197,7 +1198,7 @@ a {
 }
 
 .catalog-title {
-    margin-top: 36px;
+    margin-top: 38px;
     margin-left: 60px;
     margin-bottom: 25px;
 
@@ -1283,8 +1284,8 @@ a {
 .filters {
     margin: 0;
     padding: 0 60px;
-    padding-right: 65px;
-    width: 500px;
+    padding-right: 70px;
+    width: 330px;
 
     position: relative;
 
@@ -1311,7 +1312,7 @@ a {
     background-image: linear-gradient(#d9d9d9 70px, #ebebeb 70px);
 }
 
-.filters fieldset {
+.filters-form fieldset {
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
@@ -1319,6 +1320,10 @@ a {
     border: none;
 
     position: relative;
+}
+
+.filters-form fieldset:last-of-type {
+    margin-bottom: 30px;
 }
 
 .filters h2,
@@ -1337,7 +1342,7 @@ a {
 
 .filters legend {
     margin: 0;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
     padding: 0;
 }
 
@@ -1348,7 +1353,7 @@ a {
     height: 2px;
     
     position: absolute;
-    top: -14px;
+    top: -12px;
     left: 0;
 
     background-color: #000000;
@@ -1367,7 +1372,7 @@ a {
 }
 
 .filter-range {
-    margin-top: 20px;
+    margin-top: 14px;
 
     font-family: "Gilroy Light", Arial, sans-serif;
     
@@ -1396,8 +1401,8 @@ a {
 }
 
 .range-toggle {
-    -webkit-box-sizing: initial;
-            box-sizing: initial;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
 
     position: absolute;
     top: -9px;
@@ -1474,7 +1479,7 @@ a {
 .filter-input-checkbox + label::before {
     content: "";
     position: absolute;
-    left: -40px;
+    left: -42px;
     top: 7px;
 
     width: 23px;
@@ -1489,7 +1494,7 @@ a {
     content: "";
 
     position: absolute;
-    left: -40px;
+    left: -42px;
     top: 7px;
 
     width: 27px;
@@ -1514,7 +1519,7 @@ a {
     content: "";
 
     position: absolute;
-    left: -40px;
+    left: -42px;
     top: 7px;
 
     width: 25px;
@@ -1529,7 +1534,7 @@ a {
 
     position: absolute;
     top: 15px;
-    left: -32px;
+    left: -34px;
 
     width: 9px;
     height: 9px;
@@ -1549,7 +1554,12 @@ a {
 }
 
 .filters .button {
+    margin: 0;
     width: 100%;
+}
+
+.items-catalog-column {
+    width: 830px;
 }
 
 .sorting {
@@ -1869,9 +1879,7 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    
     min-height: 70px;
 
     list-style: none;
@@ -1893,7 +1901,7 @@ a {
         -ms-flex-align: center;
             align-items: center;
     
-    width: 125px;
+    width: 128px;
     height: 70px;
 
     margin: 0;
@@ -1912,7 +1920,7 @@ a {
 }
 
 .pagination-button:first-child {
-    margin-right: 212px;
+    margin-right: 210px;
 }
 
 .pagination-button:last-child {
@@ -1920,7 +1928,9 @@ a {
 }
 
 .pagination-item {
-    margin-right: 31px;
+    margin-right: 28px;
+    margin-top: 24px;
+    margin-bottom: 22px;
 }
 
 .pagination-item:last-child {
@@ -1961,6 +1971,8 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+
+    width: 1160px;
 }
 
 .footer-logo path {
@@ -1993,22 +2005,17 @@ a {
     margin-bottom: 25px;
 }
 
-.footer-column:last-child {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+.footer-decoration:last-child {
     margin-bottom: 0;
 
     position: relative;
 }
 
-.footer-column:last-child::before {
+.footer-decoration::before {
     content: "";
 
-    margin-right: 429px;
-
-    position: relative;
-    top: 50%;
+    position: absolute;
+    top: 12px;
     left: 0;
 
     width: 80px;
@@ -2136,11 +2143,12 @@ a {
 }
 
 .footer-social {
-    margin-right: auto;
+    margin-left: 508px;
 }
 
 .social-button {
     margin-right: 20px;
+    width: 136px;
 
     color: rgba(255, 255, 255, 0.3);
 }
@@ -2208,15 +2216,23 @@ a {
 }
 
 .letter-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .letter-form p {
     margin: 0;
     margin-bottom: 39px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .letter-form p:first-child {
