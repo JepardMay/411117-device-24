@@ -2005,8 +2005,9 @@ a {
     margin-bottom: 25px;
 }
 
-.footer-decoration:last-child {
+.footer-decoration {
     margin-bottom: 0;
+    align-items: flex-end;
 
     position: relative;
 }
@@ -2015,7 +2016,7 @@ a {
     content: "";
 
     position: absolute;
-    top: 12px;
+    top: 16px;
     left: 0;
 
     width: 80px;
@@ -2143,12 +2144,12 @@ a {
 }
 
 .footer-social {
-    margin-left: 508px;
+    width: 160px;
+    margin-left: auto;
 }
 
 .social-button {
     margin-right: 20px;
-    width: 136px;
 
     color: rgba(255, 255, 255, 0.3);
 }
@@ -2175,6 +2176,10 @@ a {
 
 .social-button:focus {
     color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright {
+    margin-left: 464px;
 }
 
 .footer-copyright path {
