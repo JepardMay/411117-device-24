@@ -156,9 +156,9 @@ a {
             flex-direction: column;
     
     background-color: transparent;
-    background-image: -webkit-linear-gradient(transparent 40px, rgba(240, 197, 46, 0.5) 40px);
-    background-image: -o-linear-gradient(transparent 40px, rgba(240, 197, 46, 0.5) 40px);
-    background-image: linear-gradient(transparent 40px, rgba(240, 197, 46, 0.5) 40px);
+    background-image: -webkit-linear-gradient(transparent 38px, rgba(240, 197, 46, 0.5) 38px);
+    background-image: -o-linear-gradient(transparent 38px, rgba(240, 197, 46, 0.5) 38px);
+    background-image: linear-gradient(transparent 38px, rgba(240, 197, 46, 0.5) 38px);
 }
 
 .main-header-logo {
@@ -194,7 +194,7 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -202,7 +202,7 @@ a {
     font-family: "Open Sans Light", Arial, sans-serif;
     
     font-size: 15px;
-    line-height: 30px;
+    line-height: 25px;
     font-weight: 300;
 }
 
@@ -487,7 +487,7 @@ a {
 .slider {
     margin: 0;
     padding: 0;
-    margin-bottom: 105px;
+    margin-bottom: 100px;
 
     position: relative;
     
@@ -545,21 +545,24 @@ a {
         -ms-grid-row-align: center;
 
         align-self: center;
+
+    padding-top: 5px;
 }
 
 .slider-item h3 {
     margin-top: 84px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
     position: relative;
     z-index: 2;
 
     font-size: 47px;
     line-height: 56px;
+    letter-spacing: 0.47px;
 }
 
 .slider-item_selfie-stick .slider-image-wrapper {
-    margin-left: 92px;
+    margin-left: 90px;
 }
 
 .slider-item_selfie-stick .slider-info-wrapper {
@@ -587,7 +590,7 @@ a {
 
 .slider-item_selfie-stick h3,
 .slider-item_fitness-bracelet h3 {
-    padding-right: 90px;
+    padding-right: 82px;
 }
 
 .slider-item h3::before {
@@ -617,7 +620,7 @@ a {
 
 .slider-item .button {
     width: 220px;
-    margin-bottom: 48px;
+    margin-bottom: 50px;
 }
 
 .slider-controls label {
@@ -645,11 +648,23 @@ a {
     font-size: 0;
 }
 
+.features {
+    border-collapse: collapse;
+}
+
 .features td {
     width: 160px;
+    padding: 0;
+    padding-bottom: 8px;
+}
+
+.features td:nth-child(2) {
+    width: 140px;
 }
 
 .features tr:first-child {
+    margin-bottom: ;
+
     font-family: "Gilroy Light", Arial, sans-serif;
     
     font-size: 36px;
@@ -695,7 +710,7 @@ a {
 }
 
 .popular {
-    margin-bottom: 80px;
+    margin-bottom: 82px;
 }
 
 .popular ul {
@@ -732,7 +747,7 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
 
-    margin-top: 194px;
+    margin-top: 192px;
     width: 160px;
 
     color: #000000;
@@ -768,32 +783,36 @@ a {
     height: 160px;
 
     background-repeat: no-repeat;
-    background-position: center center;
 }
 
 .popular-item-1::after {
     background-image: url("../img/popular-1.svg");
+    background-position: 32px 52px;
 }
 
 .popular-item-2::after {
     background-image: url("../img/popular-2.svg");
-    background-position: center bottom;
+    background-position: 38px 42px;
 }
 
 .popular-item-3::after {
     background-image: url("../img/popular-3.svg");
+    background-position: 50px 38px;
 }
 
 .popular-item-4::after {
     background-image: url("../img/popular-4.svg");
+    background-position: 28px 50px;
 }
 
 .popular-item-5::after {
     background-image: url("../img/popular-5.svg");
+    background-position: 54px 32px;
 }
 
 .popular-item-6::after {
     background-image: url("../img/popular-6.svg");
+    background-position: 12px 48px;
 }
 
 .popular-item:hover::before {
@@ -887,7 +906,7 @@ a {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 283px;
-    height: 320px;
+    height: 318px;
     
     border-right: 7px solid #000000;
     -ms-flex-item-align: stretch;
@@ -937,7 +956,7 @@ a {
 
 .services-slider-list {
     padding-top: 72px;
-    padding-left: 116px;
+    padding-left: 118px;
     padding-right: 260px;
 
     position: relative;
@@ -978,6 +997,7 @@ a {
 
     font-size: 47px;
     line-height: 48px;
+    letter-spacing: 0.47px;
 }
 
 .services-slider-list p {
@@ -1096,7 +1116,7 @@ a {
 
 .index-column h2 {
     margin-top: 45px;
-    margin-bottom: 45px;
+    margin-bottom: 43px;
 
     position: relative;
 
@@ -1156,7 +1176,7 @@ a {
 
 .info ul {
     margin: 0;
-    margin-top: 62px;
+    margin-top: 66px;
     margin-bottom: 55px;
     padding: 0;
     
@@ -1176,7 +1196,7 @@ a {
 
     position: absolute;
     top: 16px;
-    left: 5px;
+    left: 1px;
 
     width: 8px;
     height: 8px;
@@ -1186,7 +1206,7 @@ a {
 }
 
 .contact {
-    width: 560px;
+    width: 562px;
 }
 
 .contact img {
@@ -1198,12 +1218,13 @@ a {
 }
 
 .catalog-title {
-    margin-top: 38px;
+    margin-top: 37px;
     margin-left: 60px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 
     font-size: 47px;
     line-height: 48px;
+    letter-spacing: 0.47px;
 }
 
 .breadcrumbs {
@@ -1284,7 +1305,7 @@ a {
 .filters {
     margin: 0;
     padding: 0 60px;
-    padding-right: 70px;
+    padding-right: 68px;
     width: 330px;
 
     position: relative;
@@ -1314,7 +1335,7 @@ a {
 
 .filters-form fieldset {
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
     padding: 0;
 
     border: none;
@@ -1335,14 +1356,14 @@ a {
 
 .filters h2 {
     margin: 0;
-    margin-bottom: 80px;
+    margin-bottom: 78px;
     padding: 23px 0;
     height: 73px;
 }
 
 .filters legend {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     padding: 0;
 }
 
@@ -1372,7 +1393,7 @@ a {
 }
 
 .filter-range {
-    margin-top: 14px;
+    margin-top: 15px;
 
     font-family: "Gilroy Light", Arial, sans-serif;
     
@@ -1423,11 +1444,11 @@ a {
 }
 
 .range-toggle-min {
-    left: -4px;
+    left: -7px;
 }
 
 .range-toggle-max {
-    left: 110px;
+    left: 107px;
 }
 
 .price-controls {
@@ -1444,7 +1465,7 @@ a {
 }
 
 .price-controls input {
-    width: 75px;
+    width: 72px;
     margin: 0;
 
     color: inherit;
@@ -1457,7 +1478,7 @@ a {
 .filter-option {
     margin: 0;
     padding: 0;
-    padding-left: 40px;
+    padding-left: 38px;
 }
 
 .filter-option label {
@@ -1479,7 +1500,7 @@ a {
 .filter-input-checkbox + label::before {
     content: "";
     position: absolute;
-    left: -42px;
+    left: -40px;
     top: 7px;
 
     width: 23px;
@@ -1494,7 +1515,7 @@ a {
     content: "";
 
     position: absolute;
-    left: -42px;
+    left: -40px;
     top: 7px;
 
     width: 27px;
@@ -1519,7 +1540,7 @@ a {
     content: "";
 
     position: absolute;
-    left: -42px;
+    left: -40px;
     top: 7px;
 
     width: 25px;
@@ -1534,7 +1555,7 @@ a {
 
     position: absolute;
     top: 15px;
-    left: -34px;
+    left: -32px;
 
     width: 9px;
     height: 9px;
@@ -1559,7 +1580,7 @@ a {
 }
 
 .items-catalog-column {
-    width: 830px;
+    width: 834px;
 }
 
 .sorting {
@@ -1570,7 +1591,7 @@ a {
         -ms-flex-align: center;
             align-items: center;
     padding: 23px 0;
-    padding-left: 73px;
+    padding-left: 72px;
     margin-bottom: 26px;
 
     position: relative;
@@ -2002,12 +2023,14 @@ a {
 }
 
 .footer-column:first-child {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
 }
 
 .footer-decoration {
     margin-bottom: 0;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 
     position: relative;
 }
@@ -2049,7 +2072,7 @@ a {
     font-family: "Open Sans Light", Arial, sans-serif;
     
     font-size: 15px;
-    line-height: 30px;
+    line-height: 25px;
     font-weight: 300;
 }
 
@@ -2110,7 +2133,7 @@ a {
 }
 
 .footer-site-navigation li {
-    margin-right: 35px;
+    margin-right: 34px;
 }
 
 .footer-site-navigation li:last-child {
@@ -2149,7 +2172,7 @@ a {
 }
 
 .social-button {
-    margin-right: 20px;
+    margin-right: 18px;
 
     color: rgba(255, 255, 255, 0.3);
 }
