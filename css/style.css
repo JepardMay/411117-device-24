@@ -2217,9 +2217,49 @@ a {
     fill-opacity: 0.3;
 }
 
+@keyframes bounce  {
+    0% {
+        transform: translateX(-2000px);
+    }
+
+    70% {
+        transform: translateX(30px);
+    }
+
+    90% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
 .modal {
     position: fixed;
-    z-index: 20;
+    z-index: 10;
 
     color: #000000;
 
@@ -2229,10 +2269,10 @@ a {
 }
 
 .modal-letter {
-    display: none;
-
     top: 50%;
     left: 50%;
+    
+    display: none;
     margin-left: -480px;
     margin-top: -277px;
 
@@ -2283,8 +2323,13 @@ a {
     font-weight: normal;
     color: rgba(70, 70, 70, 0.4);
 
-    background-color: #e5e5e5;
+    background-color: #f2f2f2;
     border: solid 3px transparent;
+}
+
+.letter-form input:hover,
+.letter-form textarea:hover {
+    background-color: #eaeaea;
 }
 
 .letter-form input:focus,
@@ -2311,6 +2356,7 @@ a {
 .letter-form textarea {
     width: 760px;
     height: 156px;
+    resize: none;
 }
 
 .letter-form .button {
@@ -2318,23 +2364,45 @@ a {
 }
 
 .modal-map {
-    display: none;
-    
     top: 50%;
     left: 50%;
 
+    display: none;
     width: 960px;
     height: 559px;
     margin-left: -480px;
     margin-top: -280px;
 }
 
-.modal-map p{
+.modal-map p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
     margin: 0;
+}
+
+.modal-map iframe {
+    position: relative;
+    z-index: 20;
+
+    border: none;
+}
+
+.modal-show {
+    display: block;
+
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }
 
 .modal-close {
     position: absolute;
+    z-index: 30;
     top: 22px;
     right: 22px;
 
