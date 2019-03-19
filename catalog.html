@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -89,10 +89,10 @@
               <div class="filter-range">
                 <div class="range-controls">
                   <div class="scale">
-                    <div class="bar"></div>
+                    <div class="bar"><span class="visually-hidden">Сортировка по цене</span></div>
                   </div>
-                  <div class="range-toggle range-toggle-min"></div>
-                  <div class="range-toggle range-toggle-max"></div>
+                  <button class="range-toggle range-toggle-min" type="button"><span class="visually-hidden">Минимальная цена</span></button>
+                  <button class="range-toggle range-toggle-max" type="button"><span class="visually-hidden">Максимальная цена</span></button>
                 </div>
                 <div class="price-controls">
                   <label class="min-price">от <input type="text" name="min-price" value="0"></label>
