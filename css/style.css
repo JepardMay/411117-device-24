@@ -1422,14 +1422,12 @@ a {
 }
 
 .range-toggle {
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
-
     position: absolute;
     top: -9px;
 
     width: 4px;
     height: 4px;
+    padding: 2px;
 
     background-color: #d9d9d9;
     border: 8px solid #ffffff;
@@ -1437,9 +1435,11 @@ a {
     -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
             box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     cursor: pointer;
+    outline: none;
 }
 
-.range-toggle:hover {
+.range-toggle:hover,
+.range-toggle:focus {
     border: 9px solid #ffffff;
 }
 
@@ -1473,6 +1473,7 @@ a {
 
     background: none;
     border: none;
+    outline: none;
 }
 
 .filter-option {
@@ -1527,7 +1528,9 @@ a {
 }
 
 .filter-input-checkbox + label:hover::before,
-.filter-input-checkbox:checked + label:hover::after {
+.filter-input-checkbox:checked + label:hover::after,
+.filter-input-checkbox:focus + label::before,
+.filter-input-checkbox:focus:checked + label::after {
     opacity: 0.6;
 }
 
@@ -1565,7 +1568,9 @@ a {
 }
 
 .filter-input-radio + label:hover::before,
-.filter-input-radio:checked + label:hover::after {
+.filter-input-radio:checked + label:hover::after,
+.filter-input-radio:focus + label::before,
+.filter-input-radio:focus:checked + label::after {
     opacity: 0.6;
 }
 
